@@ -43,7 +43,21 @@ public class Solution {
             String line = reader.readLine();
             list.add(line.toLowerCase());
         }
-
         // напишите тут ваш код
+        int[] letterCounts = new int[alphabet.size()];
+        for (String line : list) {
+            for (char c : line.toCharArray()) {
+                int index = alphabet.indexOf(c);
+                if (index != -1) {
+                    letterCounts[index]++;
+                }
+            }
+
+            for (int i = 0; i < alphabet.size(); i++) {
+                System.out.println(alphabet.get(i) + " " + letterCounts[i]);
+            }
+        }
     }
 }
+
+

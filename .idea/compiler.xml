@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/09 Приведение примитивных типов расширение и сужение/task1007/src/task1007/Solution.java" />
+    </excludeFromCompile>
+  </component>
+</project>

@@ -28,5 +28,21 @@ public class Solution {
 
     public static void readData() {
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> numbers = new ArrayList<>();
+
+        try {
+            while (true) {
+                String input = reader.readLine();
+                int number = Integer.parseInt(input);
+                numbers.add(number);
+            }
+        } catch (NumberFormatException e) {
+            for (int number : numbers) {
+                System.out.println(number);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

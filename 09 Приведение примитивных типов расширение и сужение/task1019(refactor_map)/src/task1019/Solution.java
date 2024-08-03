@@ -43,10 +43,23 @@ Requirements:
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Map<String, Integer> map = new HashMap<>();
 
-        int id = Integer.parseInt(reader.readLine());
-        String name = reader.readLine();
+        while (true) {
+            String idStr = reader.readLine();
+            if (idStr.isEmpty()) {
+                break;
+            }
+            int id = Integer.parseInt(idStr);
+            String name = reader.readLine();
+            if (name.isEmpty()) {
+                break;
+            }
+            map.put(name, id);
+        }
 
-        System.out.println("Id=" + id + " Name=" + name);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getValue() + " " + entry.getKey());
+        }
     }
 }

@@ -20,24 +20,36 @@ public class Solution {
     public static String method1() {
         method2();
         //напишите тут ваш код
+        return "method1 вызван из " + getMethodName();
     }
 
     public static String method2() {
         method3();
         //напишите тут ваш код
+        return "method2 вызван из " + getMethodName();
     }
 
     public static String method3() {
         method4();
         //напишите тут ваш код
+        return "method3 вызван из " + getMethodName();
     }
 
     public static String method4() {
         method5();
         //напишите тут ваш код
+        return "method4 вызван из " + getMethodName();
     }
 
     public static String method5() {
         //напишите тут ваш код
+        return "method5 вызван из " + getMethodName();
+    }
+    private static String getMethodName() {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        if (stackTrace.length >= 4) {
+            return stackTrace[3].getMethodName();
+        }
+        return "неизвестный метод";
     }
 }
